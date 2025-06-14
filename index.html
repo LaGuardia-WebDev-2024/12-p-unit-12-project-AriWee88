@@ -2,8 +2,8 @@
 Requirements
 [  ] $() Select by Element, ID AND Class 
 [  ] Use Three Different jQuery Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[ ] Add Five CSS Declarations
+[] Include Three Images
 
 Select ONE Additional 
 [ no ] Feature 1 - Use .addClass() method
@@ -13,49 +13,178 @@ Select ONE Additional
 [ no ] Feature 5 - Use .append() method
 -->
 
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Unit 12 Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap"
+      rel="stylesheet"
+        
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barrio&family=Dokdo&family=Fleur+De+Leah&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barrio&family=Dokdo&family=Fleur+De+Leah&family=Praise&display=swap" rel="stylesheet">
   </head>
   <body>
     <button id="mem1-button">Memory #1</button>
     <button id="mem2-button">Memory #2</button>
     <button id="mem3-button">Memory #3</button>
     <h1>My Top 3 Memories of <span>This Year</span></h1>
+    <h5>
+      click the buttons on top and the faded imgs to reveal more!
+    </h5>
     <ol>
       <li>
         <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
+
+        <img
+          src="https://cdn.glitch.global/4d0c5eba-fb1d-4831-aeb0-5f437dcb141f/IMG_9553.jpg?v=1749743075754"
+          id="img1"
+          width="200"
+             
+        />
+      <h2>
+        Drive to the christmas tree farm // Finding the tree! 
+        
+        </h2>
+       
       </li>
+      
+
+      <img
+          src="https://cdn.glitch.global/4d0c5eba-fb1d-4831-aeb0-5f437dcb141f/IMG_9574.jpg?v=1749743109736"
+          id="afterimg1"
+           class="center"
+           width="500"
+           >
+      
+      <h2>
+        Christmas tree shopping every year is easily one of my favorite traditions. The temp is low and the vibes are high!
+        </h2>
+      
+      
+      
+      
 
       <li>
         <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+       
+       
+       <img src="https://cdn.glitch.global/4d0c5eba-fb1d-4831-aeb0-5f437dcb141f/IMG_1211.jpg?v=1749743099316"
+          id="img2"
+          width="200">
+        
       </li>
+      <h2>
+        Snow day!! Me and my sister made food while our parents were out... 
+      </h2>
 
+      <img
+          src="https://cdn.glitch.global/4d0c5eba-fb1d-4831-aeb0-5f437dcb141f/IMG_1320%20(1).jpg?v=1749743056920"
+          id="afterimg2"
+           class="center"
+           width="500"
+           >
+      <h2>
+         and later went to our local park to play in the snow:)
+      </h2>
+      
       <li>
         <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+           <img src="https://cdn.glitch.global/4d0c5eba-fb1d-4831-aeb0-5f437dcb141f/IMG_7014.jpg?v=1749743047222"
+          id="img3"
+          width="200">
+    
       </li>
+      
+       <img
+          src="https://cdn.glitch.global/4d0c5eba-fb1d-4831-aeb0-5f437dcb141f/181D49B3-38E4-49DF-B547-4FD7CC4DDDD1.JPG?v=1749743069177"
+          id="afterimg3"
+           class="center"
+           width="300"
+           >
+       <h2>
+      Saw my favorite artists(Wasia Project) at The Blue Note! <br>My mom used to work there, her connection got us the best view
+    </h2>
+      
     </ol>
+   
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+        $("#afterimg1").hide();
       $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
+        $("#mem1").css("color", "rgb(153, 181, 221)");
       });
 
       $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
+        $("#mem2").css("color", "rgb(153, 181, 221)");
+      });
+      
+      
+       $("#afterimg2").hide();
+      $("#mem2-button").click(function () {
+        $("#mem2").css("color", "rgb(153, 181, 221)");
       });
 
+      
+      $("#afterimg3").hide();
+  
       $("#mem3-button").click(function () {
-        $("#mem3").css("color", "green");
+        $("#mem3").css("color", "rgb(153, 181, 221)");
       });
+
+      $("#img1").hide();
+
+      $("#mem1-button").click(function () {
+        $("#img1").show();
+      });
+
+
+      $("#img1").click(function () {
+        $("#afterimg1").slideDown();
+      });
+
+       $("#img2").click(function () {
+        $("#afterimg2").slideDown();
+      });
+      
+      
+        $("#img2").hide();
+
+      $("#mem2-button").click(function () {
+        $("#img2").show();
+      });
+        
+        $("#img3").hide();
+
+      $("#mem3-button").click(function () {
+        $("#img3").show();
+      });
+      
+       $("#img3").click(function () {
+        $("#afterimg3").slideDown();
+      });
+      
+      $("h1").hover(
+        function () {
+          $(this).css("color", "rgb(247, 106, 9)");
+        },
+        function () {
+          $(this).css("color", "rgb(90, 112, 236)");
+        }
+      );
+      
+      
     </script>
   </body>
 </html>
